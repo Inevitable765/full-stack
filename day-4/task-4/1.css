@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  background-color: aliceblue;
+}
+main{
+  margin: 100px 50px 50px 400px;
+  width: 40%;
+  height: 25rem;
+  background-color: rgb(56, 224, 56);
+  border-radius: 10px;
+}
+.first{
+position: relative;
+top: 90px;
+left: 80px;
+}
+button{
+  width: 140px;
+  height: 40px;
+  border-radius:30px;
+}
+.two{
+  font-family: system-ui;
+  bottom: 10px;
+}
+button:hover{
+  background-color: rgb(61, 240, 61);
+}

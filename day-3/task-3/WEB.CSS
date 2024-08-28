@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+  gap: 30px;
+  padding: 30px;
+}
+#first {
+  width: 10%;
+  height: 50px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 70%;
+  top: 15px;
+}
+.container {
+  background: url("inde.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.background-image {
+  /* background-image: url("index.jpg"); */
+  background-size: cover;
+  width: 100%;
+  height: 87vh;
+  background-size: cover;
+  display: flex;
+  /* justify-content: end; */
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  /* margin-top: 140px; */
+}
+h1 {
+  font-size: 5vh;
+}
+.first {
+  padding-top: 10px;
+  /* position: absolute; */
+
+  color: rgb(0, 0, 0);
+  width: fit-content;
+  /* background-color: rgb(74, 211, 62); */
+  height: 10vh;
+  margin-right: 180px;
+}
+#pro {
+  background-color: rgb(184, 207, 184);
+  /* position: absolute; */
+  /* bottom: 0; */
+  margin-right: 330px;
+  margin-top: 10%;
+  cursor: pointer;
+}
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: burlywood;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#main {
+  display: flex;
+  justify-content: start;
+}
+.three {
+  display: flex;
+  justify-content: end;
+  margin-right: 160px;
+  gap: 10px;
+}
+h2 {
+  font-size: 1.5rem;
+}
+.N {
+  display: flex;
+  gap: 3px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  background-color: rgb(252, 202, 184);
+}
+#Q {
+  background-color: rgb(250, 23, 23);
+  border: none;
+  cursor: pointer;
+}
+.nik {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nik i {
+  font-size: 2rem;
+  position: relative;
+  top: -30px;
+  padding: 15px;
+}

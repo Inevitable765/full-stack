@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+nav {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(76, 101, 165, 255);
+  display: flex;
+  justify-content: end;
+  color: aliceblue;
+}
+.large1 {
+  width: 40%;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-right: 45px;
+  /* align-items: right; */
+  /* margin: 0% 75%; */
+}
+.btn {
+  height: 29px;
+  width: 90px;
+  padding: 0px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 20px;
+  position: absolute;
+  right: 0;
+  margin-right: 137px;
+}
+.f {
+  color: white;
+  background-color: rgb(36, 196, 36);
+  border: none;
+  height: 2pc;
+  width: 15pc;
+  border-radius: 3%;
+  font-size: 25px;
+  cursor: pointer;
+}
+.footer {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* display: flex; */
+}
+.foot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nik {
+  width: 100%;
+  gap: 50px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.raj {
+  width: 100%;
+  height: 50px;
+  gap: 50px;
+  background-color: rgb(253, 253, 253);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 10px; */
+}
+.A {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -20px;
+}
+.A a {
+  margin: 10px;
+}
+input {
+  border-radius: 2%;
+}
+.high {
+  width: 100%;
+  height: 600px;
+  background-color: rgb(226, 222, 222);
+}
+hr {
+  width: 100%;
+  color: black;
+}
+.f:active {
+  background-color: blue;
+}

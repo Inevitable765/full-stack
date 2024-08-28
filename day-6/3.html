@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root{
+        --primarycolor:rgb(245,85,255)
+      }
+      body {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      div {
+        height: 40px;
+        width: 40px;
+        background-color: blueviolet;
+        border-radius: 50%;
+        animation-name: scale;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes scale {
+        0% {
+          transform: scale(1);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1.6);
+          opacity: 0.6;
+        }
+      }
+      h1{
+        /* Local variable */
+        color: var(--primarycolor);
+      }
+      h1::after{
+        content: '✡︎';
+      }
+      h1::first-letter{
+        color: red;
+      }
+    p::selection{
+color:royalblue;
+    }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <h1> TECHNO</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora provident error sed commodi inventore ut blanditiis ipsum aspernatur velit nisi! Aliquid ullam, sint debitis eos dolores quasi distinctio aut necessitatibus!
+      Sed commodi aliquid explicabo nemo at, ex aspernatur esse natus aut autem minus ipsa laudantium iusto mollitia eveniet exercitationem fugiat vero eaque! Fugit tempora non veniam excepturi itaque blanditiis praesentium.
+      Eos ducimus, commodi aspernatur vel laborum distinctio vitae ipsa. Similique quaerat earum sint asperiores corporis amet magni illo temporibus quia voluptatum inventore quisquam explicabo quis cupiditate, animi architecto quas fuga!
+      Beatae autem tenetur debitis repellendus commodi sit laboriosam cumque fugiat. Dicta, ut! Pariatur repellat quisquam incidunt eos natus in expedita quae blanditiis alias, obcaecati illum minima cum numquam maxime voluptatem!
+      Totam id aliquid quia officia accusamus assumenda tenetur amet debitis repudiandae corporis temporibus, doloribus quasi ad, tempore dicta atque eius sint deserunt saepe! Ducimus soluta voluptate deserunt, fuga quibusdam beatae.
+    </p>
+  </body>
+</html>
