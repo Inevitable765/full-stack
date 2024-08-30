@@ -1,21 +1,35 @@
-import './App.css'
-import img  from'./assets/html.png'
-import Card from'./component/card'
-import Userlist from './component/Userlist'
-import Form from './component/Form'
+import React, { useEffect , useState } from 'react'
+import Product from './component/Product';
+import card from './component/card'
+function App() {
+  const [count ,setCount] = useState(0);
+  
+//NOTE without dependency array
+  useEffect(()=>{
+    console.log('this will run every time')
+  })
 
-function App(){
-  return(
-    <>
-    <button text='click'/>
-    <button text='submit'/>
-    <Userlist/>
-    <Form/>
-    <div className='flex justify-center'>
-      <Card img={img} text='html'/>
-      </div>
-    </>
+  //NOTE with empty dependency array
+  useEffect(()=>{
+    console.log("this will run one time when page refresh")
+  },[])
 
+  //note this will run when dependency changes or updated
+  useEffect(()=>{
+    console.log('this will run when count increase')
+  },[count])
+
+
+  return (
+    <div>
+      <p>{count}</p>
+    <button onClick={()=>{setCount(count+1)}}>increase</button>
+    <Product/>
+    </div>
   )
 }
-export default App;
+
+export default App
+
+
+// useEffect(callback ,dependeny array) ;
