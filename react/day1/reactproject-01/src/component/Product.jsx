@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Card from './card'
 function Product() {
-    const [product,setProduct]=useState([])
-  useEffect(() => {
-    const fetchdata = async () => {
-      const res = await fetch('https://dummyjson.com/products');
-      const data = await res.json();
-      setProduct(data.products);
-    };
-    fetchdata();
-  },[]);
-  return <div>
-    {product.map((el)=>(
-        <Card img={el.images[0]} text={el.title}/>
-    ))}
-  </div>;
+    const [product, setProduct] = useState([])
+    useEffect(() => {
+        const fetchdata = async () => {
+            const res = await fetch('https://dummyjson.com/products');
+            const data = await res.json();
+            setProduct(data.products);
+        };
+        fetchdata();
+    }, []);
+    return <div>
+        {product.map((el) => (
+            <Card img={el.images[0]} text={el.title} />
+        ))}
+    </div>;
 }
 
 export default Product;
