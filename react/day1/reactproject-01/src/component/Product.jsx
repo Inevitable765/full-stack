@@ -15,7 +15,7 @@ function Product() {
             <Card img={el.images[0]} text={el.title} />
         ))}
     </div>;
-}
+} 
 
 export default Product;
 
