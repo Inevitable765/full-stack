@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Foods</title>
+</head>
+<body>
+    <h1>My Favorite Foods</h1>
+    <ol>
+        <li>Pizza
+            <ul>
+                <li>Dough</li>
+                <li>Cheese</li>
+                <li>Tomato Sauce</li>
+            </ul>
+        </li>
+        <li>Burger
+            <ul>
+                <li>Bun</li>
+                <li>Patty</li>
+                <li>Lettuce</li>
+            </ul>
+        </li>
+        <li>Ice Cream
+            <ul>
+                <li>Milk</li>
+                <li>Sugar</li>
+                <li>Flavor</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Submit Your Favorite Food</h2>
+    <form action="/submit_food" method="post">
+        <label for="food">Favorite Food:</label><br>
+        <input type="text" id="food" name="food" required><br><br>
+
+        <label for="ingredients">Ingredients:</label><br>
+        <textarea id="ingredients" name="ingredients" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

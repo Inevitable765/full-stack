@@ -1,0 +1,17 @@
+<!-- 9. **Using `setInterval` with Promises:**
+ - Write a function called `repeatAction` that takes an action (a function), an interval (in milliseconds), and a duration (in
+milliseconds). Use `setInterval` to repeatedly execute the action at the specified interval, but stop after the specified
+duration. Return a Promise that resolves when the repeating action stops. -->
+
+function repeatAction(action, interval, duration) {
+    return new Promise((resolve) => {
+        const intervalId = setInterval(action, interval);
+
+        setTimeout(() => {
+            clearInterval(intervalId);
+            resolve();
+        }, duration);
+    });
+}
+
+repeatAction(() => console.log("Action!"), 1000, 5000).then(() => console.log("Finished repeating action."));

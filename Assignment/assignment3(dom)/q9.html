@@ -1,0 +1,34 @@
+<!-- 9. Create an HTML element with some text that includes HTML tags. Write two JavaScript functions:
+one that retrieves the innerHTML and one that retrieves the textContent of the element, and display
+these values elsewhere on the page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve HTML and Text</title>
+</head>
+<body>
+
+    <div id="content">Hello <strong>World</strong>!</div>
+    <button onclick="showInnerHTML()">Show innerHTML</button>
+    <button onclick="showTextContent()">Show textContent</button>
+
+    <p id="htmlDisplay"></p>
+    <p id="textDisplay"></p>
+
+    <script>
+        function showInnerHTML() {
+            var content = document.getElementById('content').innerHTML;
+            document.getElementById('htmlDisplay').textContent = 'innerHTML: ' + content;
+        }
+
+        function showTextContent() {
+            var content = document.getElementById('content').textContent;
+            document.getElementById('textDisplay').textContent = 'textContent: ' + content;
+        }
+    </script>
+
+</body>
+</html>

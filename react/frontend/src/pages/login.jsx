@@ -1,9 +1,13 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import{userLogin}from'../redux/userSlice';
+import{userDispatch}from 'react-redux';
 function Login() {
 const {handleSubmit , register} = useForm() ;
+const dispatch=dispatch
 const onSubmit = (data) => {
 console.log(data)
+dispatchEvent(userLogin(data))
 }
   return (
     <div>

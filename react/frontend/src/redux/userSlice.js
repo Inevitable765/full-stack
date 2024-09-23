@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit"
 import { createAsyncThunk
  } from "@reduxjs/toolkit"
 import axios from "axios"
-
+import{toast}from "sonner"
 export const Register = createAsyncThunk('/user/register', async(data,{rejectWithValue})=>{
     try {
       const res = axios.post('http://localhost:3000/api/register',data)
@@ -25,8 +25,10 @@ export const userLogin = createAsyncThunk('/user/login', async(data,{rejectWithV
   }
      catch (error) {
         rejectWithValue(error)
+        console.log(rejectWithValue(error))
+        return rejectWithValue(error)
     }
-
+      
 } )
 
 const initialState = {
@@ -47,6 +49,7 @@ const userSlice = createSlice({
  }).addCase(Register.fulfilled , (state)=>{
     state.loading = false ;
     state.error = null
+    toast.success('account created successfully')
  }).addCase(Register.rejected,(state,action)=>{
     state.loading = false ;
     state.error = action.payload
@@ -55,6 +58,7 @@ const userSlice = createSlice({
  }).addCase(userLogin.fulfilled,(state,action)=>{
     console.log(action.payload)
     state.loading = false
+    toast.success('login successfull')
  }).addCase(userLogin.rejected,(state,action)=>{
     console.log(action.payload)
     state.loading = false,
