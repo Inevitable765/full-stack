@@ -1,5 +1,7 @@
 const User = require('../models/userModel');
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt') ;
+const jwt = require('jsonwebtoken');
+
 exports.signUp = async (req, res, next) => {
   try {
     const { email } = req.body;
@@ -32,13 +34,15 @@ if(!user){
   throw new Error("User is not registered")
 }
 
+console.log(password , user)
  //step2 check if user password matched
 const isPasswordMatch = await bcrypt.compare(password,user.password)
  if(!isPasswordMatch){
   throw new Error("Password do not match, Please try again")
  }
 
- const token =jwt.sign({id :user._id, name:user.name,role:user.role},'this is my string',{expiresIn:'30d'})
+ //generate the tooken and send it to the frontend
+ const token = jwt.sign({id : user._id , name:user.name, role:user.role} , 'this-is-my-secret-string' , {expiresIn : '30d'} )
   
  res.status(200).json({ 
   message : "Login Successfully",
@@ -48,5 +52,19 @@ const isPasswordMatch = await bcrypt.compare(password,user.password)
 } catch (error) {
   next(error)
 }
+ 
+}
+
+exports.googleAuth = async(req,res) => {
+  try {
+     console.log(req.user)
+  const user = req.user
+  const token = jwt.sign({id : user._id , name:user.name, role:user.role} , 'this-is-my-secret-string' , {expiresIn : '30d'} )
+
+res.redirect(`http://localhost:5173/auth/google/callback?token=${token}&role=${user.role}`)
+ 
+  } catch (error) {
+    next(error)
+  }
  
 }
