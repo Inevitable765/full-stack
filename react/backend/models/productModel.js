@@ -30,9 +30,20 @@ const productSchema = new mongoose.Schema({
 
 })
 
+productSchema.virtual("discountPrice").get(function(){
+   return this.price - (this.price * this.discountPercentage/100)
+})
+
+productSchema.set('toJSON', {virtuals: true})
 
 
 const Product = mongoose.model('Product',productSchema) ;
 
 module.exports = Product
 
+
+    // name  ,
+    // price  ,
+    // image   ,
+    // stock   ,
+    // description 
