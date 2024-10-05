@@ -1,3 +1,4 @@
+
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { toast } from 'sonner';
@@ -23,7 +24,11 @@ export const createProduct = createAsyncThunk(
   'create/product',
   async (formData, { rejectWithValue }) => {
     try {
-      const res = await axios.post('http://localhost:3000/api/addproduct', formData);
+      const res = await axios.post('http://localhost:3000/api/addproduct', formData , {
+        headers : {
+          Authorization : `Bearer ${localStorage.getItem('token')}`
+        }
+      });
       return res.data;
     } catch (error) {
       return rejectWithValue(error);
