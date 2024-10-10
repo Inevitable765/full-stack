@@ -28,7 +28,7 @@ function Product() {
     transform: 'translate(-50%, -50%)',
     width: 400,
     bgcolor: 'background.paper',
-
+  
     boxShadow: 24,
     p: 4,
   };
@@ -48,7 +48,7 @@ function Product() {
         <div>
           <img
             className="object-contain w-14"
-            src={`http://localhost:3000/${params.value}`}
+            src={`${import.meta.env.VITE_API_URL}/${params.value}`}
           />
         </div>
       ),
@@ -118,7 +118,7 @@ function Product() {
       >
         Add Product
       </button>
-      <Box sx={{ height: 400, width: '100%' }}>
+      <Box sx={{ height: 300, width: '100%' }}>
         <DataGrid
           rows={product}
           columns={columns}

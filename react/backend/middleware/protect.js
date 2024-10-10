@@ -1,4 +1,3 @@
-
 //create private and protected apis
 const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
